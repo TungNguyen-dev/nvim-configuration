@@ -1,1 +1,1 @@
-# nvim-configuration
+# Project: Personalize NeoVim
