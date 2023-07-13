@@ -5,7 +5,7 @@ require "plugins"
 
 -- Configure plugins
 require "plugin-config.colorscheme"
--- require "plugin-config.cmp"
+require "plugin-config.cmp"
 -- require "plugin-config.lsp"
 -- require "plugin-config.telescope"
 -- require "plugin-config.treesitter"

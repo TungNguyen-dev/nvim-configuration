@@ -40,12 +40,28 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
-  -- Have packer manage itself
+  -- My plugins here.
+  -- Have packer manage itself.
   use "wbthomason/packer.nvim"
 
-  -- Colorschemes
+  -- Colorschemes --
   use "lunarvim/darkplus.nvim"
+
+  -- Completion --
+  use {
+    "hrsh7th/nvim-cmp",
+    requires = {
+      {"hrsh7th/cmp-buffer"},
+      {"hrsh7th/cmp-path"},
+      {"hrsh7th/cmp-cmdline"},
+      {
+        "L3MON4D3/LuaSnip", -- Snippet engine.
+        requires = {
+          "rafamadriz/friendly-snippets", -- Snippet collection.
+        },
+      },
+    }
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
