@@ -55,11 +55,22 @@ return packer.startup(function(use)
       {"hrsh7th/cmp-path"},
       {"hrsh7th/cmp-cmdline"},
       {
-        "L3MON4D3/LuaSnip", -- Snippet engine.
+        "saadparwaiz1/cmp_luasnip", -- Bridge cmp and snippets.
         requires = {
-          "rafamadriz/friendly-snippets", -- Snippet collection.
+          {"L3MON4D3/LuaSnip"}, -- Snippets engine.
+          {"rafamadriz/friendly-snippets"} -- Snippets collection.
         },
       },
+      {"hrsh7th/cmp-nvim-lsp"}, -- Bridge cmp and lsp.
+    }
+  }
+
+  -- LSP --
+  use {
+    "neovim/nvim-lspconfig", -- Enable LSP.
+    requires = {
+      {"williamboman/mason.nvim"}, -- LSP Servers Manager.
+      {"williamboman/mason-lspconfig.nvim"}, -- Bridge manson and lsp.
     }
   }
 
